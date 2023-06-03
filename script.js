@@ -64,7 +64,7 @@ function andadir(){
 if(type == "Guerreiro"){
     var p1 = new Guerreiro(prompt("Digite seu nome"),350, 100, 110);
 } else if(type == "Mago"){
-    var p1 = new Mago(prompt(),30, 100, 70);
+    var p1 = new Mago(prompt("Digite seu nome"),30, 100, 70);
 } else {
     alert("nada")
 }
