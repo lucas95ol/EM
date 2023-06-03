@@ -1,7 +1,7 @@
 var jogadas = document.querySelector(".perso-infos1");
 var infos = document.querySelector(".info-text");
 
-var type = prompt("Qual personagem vc deseja?");
+var type = prompt("Qual personagem vc deseja? (entre Mago e Guerreiro)");
 
 class Mago{
     constructor(nome,mana, vida, defesa){
@@ -61,9 +61,9 @@ function andadir(){
     }
 }
 
-if(type == "Guerreiro"){
-    var p1 = new Guerreiro(prompt("Digite seu nome"),350, 100, 110);
-} else if(type == "Mago"){
+if(type == "Guerreiro" || type == "guerreiro"){
+    var p1 = new Guerreiro(prompt("Digite seu nome"),50, 100, 10);
+} else if(type == "Mago" || type == "mago"){
     var p1 = new Mago(prompt("Digite seu nome"),30, 100, 70);
 } else {
     alert("nada")
@@ -72,7 +72,7 @@ if(type == "Guerreiro"){
 
 
 
-var dadosP = ["Nome: "+p1.nome, "Tipo de personagem: ", "Vida: " + p1.vida , "Defesa: " + p1.defesa, "Dinheiro: "];
+var dadosP = ["Nome: "+p1.nome, "Tipo de personagem:  " + type, "Vida: " + p1.vida , "Defesa: " + p1.defesa];
  
 for(let i = 0; i < dadosP.length; i++){
     let dados = document.createElement("p");
